@@ -11,6 +11,11 @@ resource "aws_instance" "test_VM" {
   instance_type = "t2.micro"
 
   tags {
-    Name = "222"  
+    Name = "${var.vm_name}"
+    test = "test tag auto"
   }
+}
+
+variable "vm_name" {
+  description = "Name for VM to be created"
 }
