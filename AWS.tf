@@ -3,11 +3,11 @@
 */
 
 provider "aws" {
-  region = "us-west-2"
+  region = "eu-central-1"
 }
   
 resource "aws_instance" "test_VM" {
-  ami           = "ami-efd0428f"
+  ami           = "ami-657bd20a"
   instance_type = "t2.micro"
 
   tags {
