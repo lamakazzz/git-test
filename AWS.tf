@@ -1,4 +1,4 @@
-/*              
+/*                
 * AWS connection. 
 */
 
@@ -19,3 +19,9 @@ resource "aws_instance" "test_VM" {
 variable "vm_name" {
   description = "Name for VM to be created"
 }
+
+
+
+
+
+terraform apply -var 'my_string=m3_test' -var 'my_map={key1="value1", key2="value2"}' -var 'my_list=["ami-abc123", "ami-bcd234"]'
