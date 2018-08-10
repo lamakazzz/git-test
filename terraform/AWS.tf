@@ -13,7 +13,7 @@ resource "aws_instance" "test_VM" {
 
   tags {
     Name = "${var.vm_name}"
-    test1 = "test tag auto12"
+    test1 = "test tag auto12-kjhkj"
   }
 }
 
