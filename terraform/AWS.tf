@@ -12,15 +12,19 @@ resource "aws_instance" "test_VM" {
   instance_type = "t2.micro"
 
   tags {
-    Name = "${var.vm_name}"
+    Name = "${lookup(var.vm_names_map, var.vm_name)}"
   }
 }
 
-/*variable "vm_name" {
+variable "vm_name" {
   description = "Name for VM to be created"
-}*/
+}
 
-variable "region_map" {
-  europe_center = "eu-central-1"
-  europe_west = "eu-west-1"
+variable "vm_names_map" {
+  type = "map"
+  default = {
+    development = "development_name"
+    staging = "staging_name"
+    production = "production_name"
+  }
 }
