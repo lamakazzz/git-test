@@ -4,7 +4,7 @@
 
 
 provider "aws" {
-  region = "eu-central-1"
+  region = "${var.region_map}"
 }
   
 resource "aws_instance" "test_VM" {
@@ -16,6 +16,11 @@ resource "aws_instance" "test_VM" {
   }
 }
 
-variable "vm_name" {
+/*variable "vm_name" {
   description = "Name for VM to be created"
+}*/
+
+variable "region_map" {
+  europe_center = "eu-central-1"
+  europe_west = "eu-west-1"
 }
