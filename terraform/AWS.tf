@@ -4,7 +4,7 @@
 
 
 provider "aws" {
-  region = "${var.region_map}"
+  region = "eu-central-1"
 }
   
 resource "aws_instance" "test_VM" {
