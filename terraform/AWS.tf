@@ -12,7 +12,7 @@ resource "aws_instance" "test_VM" {
   instance_type = "t2.micro"
 
   tags {
-    Name = "${lookup(var.vm_names_map, var.vm_name)}"
+    Name = "m3.${lookup(var.vm_names_map, var.vm_name)}"
   }
 }
 
