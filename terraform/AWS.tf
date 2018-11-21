@@ -3,7 +3,7 @@
 */
 
 
-$provider "aws" {
+aaaaprovider "aws" {
   region = "eu-central-1"
 }
   
