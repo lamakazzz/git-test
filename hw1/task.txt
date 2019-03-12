@@ -1,0 +1,17 @@
+Homework
+1.	Create your own AWS account.
+
+2.	Manually create a key pair within EC2. Don’t lose this key – you will not be able to login to your instances via SSH without private part of the key. Use the key pair name for launching your instances.
+
+3.	Run application using ASG and user-data via Terraform.
+-	You have to use Terraform. Of course, you can play with resources manually, but the final version of task has to be done via Terraform only and pushed to git.
+-	You can use any app you want  (excluding httpd, which was shown during the lecture). It can be any service or application. Criteria: I should be able to see some web page or get some positive response from your service API (if service does not have web-ui) after hitting IP address of your instances.
+-	Please consider usage of user data.
+-	Please consider usage of appropriate security items for your instances (granular SG rules). I’ll be checking your work from EPAM’s subnet.
+-	ASG has to have appropriate parameters related to number of EC2 instances, please start playing with 3 desired instances. Here you might face some issues. Please note all issues and try to find the cause and resolve them. Add the explanations of all issues which you are able to explain to your git repo too.
+-	Your infrastructure and Terraform code should be flexible as much as possible, so please consider usage of Terraform variables. 
+
+4.	Destroy all resources related to this task via Terraform.
+Please note that I’ll be checking your apps from EPAM’ subnet during the working day, so please make sure that your instances and app are running while I’m checking them. The best solution here – ping me directly in skype when you are done, check will take couple of minutes.
+
+5.	(Optional) Configure billing alarm for your AWS account. In this way you will be notified in case of spending particular amount of costs for your cloud resources. Please also consider usage of instance types and AMIs which are marked as ‘eligible for Free tier’.
