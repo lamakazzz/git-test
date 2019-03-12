@@ -16,15 +16,6 @@ resource "aws_instance" "test_VM" {
   }
 }
 
-resource "aws_instance" "test_VM" {
-  ami           = "ami-657bd20a"
-  instance_type = "t2.micro"
-
-  tags {
-    Name = "m3.${lookup(var.vm_names_map, var.vm_name)}"
-  }
-}
-
 variable "vm_name" {
   description = "Name for VM to be created"
 }
