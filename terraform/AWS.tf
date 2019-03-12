@@ -1,4 +1,4 @@
-dsgfvdfsvgdfsv/*                          
+/*                          
 * AWS connection.   
 */
 
@@ -7,6 +7,15 @@ provider "aws" {
   region = "eu-central-1"
 }
   
+resource "aws_instance" "test_VM" {
+  ami           = "ami-657bd20a"
+  instance_type = "t2.micro"
+
+  tags {
+    Name = "m3.${lookup(var.vm_names_map, var.vm_name)}"
+  }
+}
+
 resource "aws_instance" "test_VM" {
   ami           = "ami-657bd20a"
   instance_type = "t2.micro"
